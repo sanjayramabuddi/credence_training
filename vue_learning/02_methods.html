@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@2.7.16/dist/vue.js"></script>
+</head>
+<body style="background-color: #222; color: aliceblue;">
+    <div id="app">
+        <h1>{{run()}}</h1>
+        <h2>{{value('evening')}}</h2>
+        <p>My name is {{name}} and I am learning {{course}}</p>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                name: 'Sanjay',
+                course: 'Vue 2 js'
+            },
+            methods: {
+                run: function() {
+                    return "I am running this using function"
+                },
+                value: function(day) {
+                    return "Good " + day
+                },
+                valueAccess: function() {
+                    return this.name + this. course
+                }
+            }
+        })
+    </script>
+</body>
+</html>

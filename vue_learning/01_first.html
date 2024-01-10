@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@2.7.16/dist/vue.js"></script>
+</head>
+<body style="background-color: #222; color: aliceblue;">
+    <div id="app">
+        My name is {{name}} and I am learning {{course}}
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                name: 'Sanjay',
+                course: 'Vue 2 js'
+            }
+        })
+    </script>
+</body>
+</html>

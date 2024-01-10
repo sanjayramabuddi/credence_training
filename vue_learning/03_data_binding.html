@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@2.7.16/dist/vue.js"></script>
+    <style>
+        .fixImage {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #222; color: aliceblue;">
+    <div id="app">
+        <h2>Hello {{name}}</h2>
+        <a v-bind:href="link">{{desc}}</a><br><br>
+        <img v-bind:src="img" v-bind:class="{fixImage:isActive}"><br><br>
+        <form>
+            <input type="text" v-bind:value="txtname">
+            <input type="text" v-bind:value="txtemail">
+            <button type="submit">Submit</button>
+        </form>
+        <div v-html="htmlContent"></div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                name: 'kiddo',
+                desc: 'Click me to open link',
+                link: 'https://v2.vuejs.org/v2/guide/installation',
+                img: 'dr strange.jpg',
+                isActive: true,
+                txtname: "Sanjay",
+                txtemail: "saanjaygmail.com",
+                htmlContent: "<p>This is my content</p>"
+            }
+        })
+    </script>
+</body>
+
+</html>

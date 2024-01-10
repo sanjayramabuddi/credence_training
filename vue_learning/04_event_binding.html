@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@2.7.16/dist/vue.js"></script>
+</head>
+
+<body style="background-color: #222; color: aliceblue;">
+    <div id="app">
+        <h2>Counter: {{counter}}</h2>
+        <button v-on:click="increment(1)">increment</button>
+        <button v-on:click="descrement(1)">decrement</button><br><br>
+        <button v-on:dblclick="increment(5)">increment by 5</button>
+        <button v-on:dblclick="descrement(5)">descrement by 5</button>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                counter: 0
+            },
+            methods: {
+                increment: function (inc) {
+                    this.counter = this.counter + inc
+                },
+                descrement: function (desc) {
+                    this.counter = this.counter - desc
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
