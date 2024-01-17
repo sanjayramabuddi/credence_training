@@ -20,6 +20,8 @@
                 <td>{{ user.email }}</td>
             </tr>
         </table>
+        <h1 class="colorClass">Learning normal Class</h1>
+        <h1>Learning direct styling</h1>
     </div>
 </template>
 <script>
@@ -45,7 +47,7 @@ export default {
                 name: "Peter",
                 age: 20,
                 email: "efpyk@example.com"
-            }]
+            }],
         }
     },
     props: {
@@ -63,3 +65,9 @@ export default {
     }
 }
 </script>
+<style>
+.colorClass {
+    background-color: lightcoral;
+    color: black;
+}
+</style>
