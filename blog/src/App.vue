@@ -13,12 +13,16 @@
     <HookMountEx />
     <hookDestroyEx v-if="show"/>
     <button @click="burn">Destroy Me</button> -->
-    <FetchData />
-  </div>
+    <!-- <FetchData /> -->
+    <!-- <router-view></router-view> -->
+    <!-- <DirectiveCustom/> -->
+    <HomeSlots />
+</div>
 </template>
 
 <script>
-import FetchData from './components/FetchData.vue';
+import HomeSlots from './components/HomeSlots.vue';
+// import FetchData from './components/FetchData.vue';
 // import HelloWorld from "./components/HelloWorld.vue";
 // import HomeApp from "./components/HomeApp.vue";
 // import DataBind from "./components/DataBind.vue";
@@ -29,21 +33,12 @@ import FetchData from './components/FetchData.vue';
 // import HookCreateEx from "./components/HookCreateEx.vue"
 // import HookDestroyEx from './components/HookDestroyEx.vue';
 // import HookMountEx from "./components/HookMountEx.vue";
+// import DirectiveCustom from './components/DirectiveCustom.vue';
 
 export default {
   name: "App",
   components: {
-    // HelloWorld,
-    // HomeApp,
-    // DataBind,
-    // PropsAdd,
-    // ChildParent,
-    // LoginForm,
-    // FilterApp,
-    // HookCreateEx,
-    // HookMountEx,
-    // HookDestroyEx,
-    FetchData
+    HomeSlots
 },
   data() {
     return {
